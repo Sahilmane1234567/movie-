@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Explorer</h1>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for movies..." />
+        </div>
+
+        <div class="categories">
+            <button onclick="filterMovies('action')">Action</button>
+            <button onclick="filterMovies('comedy')">Comedy</button>
+            <button onclick="filterMovies('drama')">Drama</button>
+            <button onclick="filterMovies('romance')">Romance</button>
+            <button onclick="filterMovies('all')">All Movies</button>
+        </div>
+
+        <div id="moviesList" class="movies-list">
+
+        </div>
+
+        <div id="movieDetailModal" class="movie-detail-modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2 id="movieTitle"></h2>
+                <p><strong>Release Date:</strong> <span id="movieReleaseDate"></span></p>
+                <p><strong>Genre:</strong> <span id="movieGenre"></span></p>
+                <p><strong>Cast:</strong> <span id="movieCast"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
